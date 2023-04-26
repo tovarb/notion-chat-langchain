@@ -18,7 +18,7 @@ export default async function handler(
 
   try {
     // OpenAI recommends replacing newlines with spaces for best results
-    const sanitizedQuestion = question.trim().replaceAll('\n', ' ');
+    const sanitizedQuestion = question.trim().replace('\n', ' ');
 
     const index = pinecone.Index(PINECONE_INDEX_NAME);
     /* create vectorstore*/
