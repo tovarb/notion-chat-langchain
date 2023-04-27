@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import Layout from '@/components/layout';
+import styles from './index.module.css';
 
 export default function Home() {
   const [query, setQuery] = useState<string>('');
@@ -62,15 +63,22 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <section className="container max-w-xl mx-auto pt-4 pb-6 md:pt-8 md:pb-10 lg:pt-10 lg:pb-16">
-          <div className="mx-auto flex flex-col gap-4">
-            <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center mb-3">
+        <section className="w-screen max-w-xl mx-auto pt-4 pb-6 md:pt-8 md:pb-10 lg:pt-10 lg:pb-16">
+          <div className="mx-auto flex flex-col gap-4 text-center">
+            <div className="mx-auto flex flex-col gap-4 text-center">
+              <img
+                src="https://myservice-imgs-frontms.s3.us-east-2.amazonaws.com/chatbot-img.png"
+                alt="bot"
+                style={{ height: '60px' }}
+              />
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-2">
               Consultas Eleva
             </h1>
             <div className="flex w-full max-w-xl items-center space-x-2">
               <input
                 ref={inputRef}
-                className="flex h-10 w-full rounded-md border border-slate-300 bg-transparent py-2 px-3 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 type="text"
                 placeholder="¿Cómo ingreso a la plataforma de cotización?"
                 value={query}
@@ -80,30 +88,27 @@ export default function Home() {
               />
               <button
                 onClick={handleSearch}
-                className="active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:hover:bg-slate-800 dark:hover:text-slate-100 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 bg-slate-900 text-white hover:bg-slate-700 dark:bg-slate-50 dark:text-slate-900 h-10 py-2 px-4"
+                className="rounded-md bg-teal-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
               >
                 Buscar
               </button>
             </div>
             {loading && (
-              <div className="mt-3">
-                <>
-                  <div className="animate-pulse mt-2">
-                    <div className="h-4 bg-gray-300 rounded"></div>
-                    <div className="h-4 bg-gray-300 rounded mt-2"></div>
-                    <div className="h-4 bg-gray-300 rounded mt-2"></div>
-                    <div className="h-4 bg-gray-300 rounded mt-2"></div>
-                    <div className="h-4 bg-gray-300 rounded mt-2"></div>
+              <div className="flex mt-2 text-center justify-center h-screen ">
+                <div className="text-center">
+                  <div className={styles.ldsring}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                   </div>
-                </>
+                </div>
               </div>
             )}
             {!loading && answer.length > 0 && (
               <>
                 <div className="rounded-md border-neutral-300 border p-5 mt-4">
-                  <h2 className="text-xl font-bold leading-[1.1] tracking-tighter text-center">
-                    Respuesta
-                  </h2>
+                  <h2 className="text-xl font-bold leading-[1.1] tracking-tighter text-center"></h2>
                   <p className="leading-normal text-slate-700 sm:leading-7 mt-3">
                     {answer}
                   </p>
