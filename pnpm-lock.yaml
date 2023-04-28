@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@pinecone-database/pinecone':
-    specifier: 0.0.10
-    version: 0.0.10
+    specifier: 0.0.08
+    version: 0.0.8
   '@types/glob':
     specifier: ^8.1.0
     version: 8.1.0
@@ -15,7 +15,7 @@ dependencies:
     version: 9.2.1
   langchain:
     specifier: ^0.0.22
-    version: 0.0.22(@pinecone-database/pinecone@0.0.10)
+    version: 0.0.22(@pinecone-database/pinecone@0.0.8)
   next:
     specifier: 13.2.3
     version: 13.2.3(react-dom@18.2.0)(react@18.2.0)
@@ -526,13 +526,8 @@ packages:
     dev: false
     optional: true
 
-  /@pinecone-database/pinecone@0.0.10:
-    resolution: {integrity: sha512-SwfobqOmSQvEkEtw44uc6ZZ9R/aU5bDYkBAX0cGOcSk6wWlm5yiJA+XeZkyMeUsFb1EQaGhbafIy97TDqcnnsw==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      cross-fetch: 3.1.5
-    transitivePeerDependencies:
-      - encoding
+  /@pinecone-database/pinecone@0.0.8:
+    resolution: {integrity: sha512-oz/fG4YfD/N1D/9gJ0LF3z4u8vfXdn8DxQ2qSgrJJQyVoh2LiUEht8udj/7wnJTtOBtcCFIB+l7Rc1l5fXIUCw==}
     dev: false
 
   /@pkgr/utils@2.3.1:
@@ -1171,14 +1166,6 @@ packages:
 
   /console-control-strings@1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
-    dev: false
-
-  /cross-fetch@3.1.5:
-    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
-    dependencies:
-      node-fetch: 2.6.7
-    transitivePeerDependencies:
-      - encoding
     dev: false
 
   /cross-spawn@7.0.3:
@@ -2465,7 +2452,7 @@ packages:
       object.assign: 4.1.4
     dev: true
 
-  /langchain@0.0.22(@pinecone-database/pinecone@0.0.10):
+  /langchain@0.0.22(@pinecone-database/pinecone@0.0.8):
     resolution: {integrity: sha512-i6Lon2S3TK/7eHLwxsTccDrec+O1ZVdGfndwpzCRVli9X4K7sQ05h04T6FAOLREb+sspmGrZy407ZXS4CyXhRw==}
     peerDependencies:
       '@dqbd/tiktoken': ^0.4.0
@@ -2497,7 +2484,7 @@ packages:
       srt-parser-2:
         optional: true
     dependencies:
-      '@pinecone-database/pinecone': 0.0.10
+      '@pinecone-database/pinecone': 0.0.8
       browser-or-node: 2.1.1
       d3-dsv: 3.0.1
       deepcopy: 2.1.0
@@ -2792,18 +2779,6 @@ packages:
 
   /node-ensure@0.0.0:
     resolution: {integrity: sha512-DRI60hzo2oKN1ma0ckc6nQWlHU69RH6xN0sjQTjMpChPfTYvKZdcQFfdYK2RWbJcKyUizSIy/l8OTGxMAM1QDw==}
-    dev: false
-
-  /node-fetch@2.6.7:
-    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
-    dependencies:
-      whatwg-url: 5.0.0
     dev: false
 
   /node-fetch@2.6.9:
