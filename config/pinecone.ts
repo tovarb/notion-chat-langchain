@@ -1,5 +1,5 @@
-const PINECONE_INDEX_NAME = 'notionchatlangchain';
+const PINECONE_INDEX_NAME = 'notionchat';
 
-const PINECONE_NAME_SPACE = 'notionchat'; //namespace is optional for your vectors
+const PINECONE_NAME_SPACE = 'notionchatlangchain'; //namespace is optional for your vectors
 
 export { PINECONE_INDEX_NAME, PINECONE_NAME_SPACE };
