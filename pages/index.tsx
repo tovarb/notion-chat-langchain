@@ -78,13 +78,13 @@ export default function Home() {
             <div className="flex w-full max-w-xl items-center space-x-2">
               <input
                 ref={inputRef}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-indigo-600 sm:text-sm sm:leading-6 border border-gray-300"
                 type="text"
-                placeholder="¿Cómo ingreso a la plataforma de cotización?"
+                placeholder="Cómo registro un usuario"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleEnter}
-                style={{ color: 'black' }}
+                style={{ color: 'black', border: '1px solid #EAEAEA' }}
               />
               <button
                 onClick={handleSearch}
@@ -107,7 +107,7 @@ export default function Home() {
             )}
             {!loading && answer.length > 0 && (
               <>
-                <div className="rounded-md border-neutral-300 border p-5 mt-4">
+                <div className="rounded-md border-neutral-300 border p-5 mt-4 mx-2 sm:mx-0">
                   <h2 className="text-xl font-bold leading-[1.1] tracking-tighter text-center"></h2>
                   <p className="leading-normal text-slate-700 sm:leading-7 mt-3">
                     {answer}
