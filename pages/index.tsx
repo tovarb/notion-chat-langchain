@@ -67,11 +67,12 @@ export default function Home() {
           <div className="mx-auto flex flex-col gap-4 text-center">
             <div className="mx-auto flex flex-col gap-4 text-center">
               <img
-                src="https://myservice-imgs-frontms.s3.us-east-2.amazonaws.com/chatbot-img.png"
+                src="https://mcusercontent.com/e7f9fab7d966dc8d10caae6d8/images/e7c8fa3e-34bb-7f7c-7f6d-4ebf58d799f4.jpg"
                 alt="bot"
-                style={{ height: '60px' }}
+                style={{ height: '140px' }}
               />
             </div>
+            <br />
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-2">
               Consultas Eleva
             </h1>
