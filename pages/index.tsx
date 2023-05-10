@@ -74,14 +74,14 @@ export default function Home() {
             </div>
             <br />
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-2">
-              Consultas Eleva
+              Consulta la información
             </h1>
             <div className="flex w-full max-w-xl items-center space-x-2">
               <input
                 ref={inputRef}
                 className="block w-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-indigo-600 sm:text-sm sm:leading-6 border border-gray-300"
                 type="text"
-                placeholder="Cómo registro un usuario"
+                placeholder="Necesito ayuda"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleEnter}
