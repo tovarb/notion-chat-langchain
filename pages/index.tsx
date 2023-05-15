@@ -73,9 +73,6 @@ export default function Home() {
               />
             </div>
             <br />
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-2">
-              Consulta la información
-            </h1>
             <div className="flex w-full max-w-xl items-center space-x-2">
               <input
                 ref={inputRef}
